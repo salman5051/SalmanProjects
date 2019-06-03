@@ -1,13 +1,14 @@
-﻿@model IEnumerable<MoviePass.Models.Movie>
-@{ ViewBag.Title = "Movies";
+﻿@model IEnumerable<MoviePass.Models.Customer>
+@{
+    ViewBag.Title = "Customers";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Movies</h2>
+<h2>Customers</h2>
 
 @if (!Model.Any())
 {
-    <p>No Movies Found</p>
+    <p>No Customers Registers</p>
 }
 else
 {
@@ -15,16 +16,16 @@ else
         <thead>
             <tr>
                 <td>
-                    <strong> Movies</strong>
+                    <strong> Customers</strong>
                 </td>
             </tr>
         </thead>
         <tbody>
-            @foreach (var movie in Model)
+            @foreach (var customer in Model)
             {
                 <tr>
                     <td>
-                        @Html.ActionLink(movie.Name, "Details", "Movie", new { id = movie.Id }, null)
+                        @Html.ActionLink(customer.Name, "Details", "Customer", new { id = customer.Id }, null)
                     </td>
                 </tr>
             }

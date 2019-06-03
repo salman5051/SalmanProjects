@@ -15,6 +15,12 @@ namespace MoviePass.Controllers
             var moviesList = GetMovies();
             return View(moviesList);
         }
+
+        public ActionResult Details(int id)
+        {
+            var movieDetails = GetMovies().SingleOrDefault(c => c.Id == id);
+            return View(movieDetails);
+        }
         private List<Movie> GetMovies()
         {
             var moviesList = new List<Movie>
