@@ -1,4 +1,5 @@
 ﻿using MoviePass.Models;
+using System.Data.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,36 +10,34 @@ namespace MoviePass.Controllers
 {
     public class CustomerController : Controller
     {
+
+        private ApplicationDbContext _context;
+
+        public CustomerController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         // GET: Customer
         public ActionResult Index()
         {
-            var customersList = GetCustomers();
+            var customersList = _context.Customers.Include(c =>c.MembershipType).ToList();
             return View(customersList);
         }
 
         public ActionResult Details(int id)
         {
-            var customersList = GetCustomers().SingleOrDefault(c=> c.Id==id);
-            return View(customersList);
-        }
-
-        private List<Customer> GetCustomers()
-        {
-            var customerList = new List<Customer>
+            var customersList = _context.Customers.SingleOrDefault(c=> c.Id==id);
+            if(customersList==null)
             {
-                new Customer { Id = 1, Name= "Salman"},
-
-                new Customer { Id = 2, Name= "Shahanaz"},
-
-                new Customer { Id = 3, Name= "Naveen"},
-
-                new Customer { Id = 4, Name= "Bhargav"},
-
-                new Customer { Id = 5, Name= "Shalini"},
-
-                new Customer { Id = 6, Name= "Vanitha"}
-            };
-            return customerList;
+                return HttpNotFound();
+            }
+            return View(customersList);
         }
     }
 }
