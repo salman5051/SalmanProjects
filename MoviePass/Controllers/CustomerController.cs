@@ -32,7 +32,7 @@ namespace MoviePass.Controllers
 
         public ActionResult Details(int id)
         {
-            var customersList = _context.Customers.SingleOrDefault(c=> c.Id==id);
+            var customersList = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c=> c.Id==id);
             if(customersList==null)
             {
                 return HttpNotFound();

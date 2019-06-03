@@ -207,6 +207,18 @@
     <Compile Include="Migrations\201906030613362_PopulateMembershipTypeNameColumn.Designer.cs">
       <DependentUpon>201906030613362_PopulateMembershipTypeNameColumn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906030650137_AddedBirthDateToCustomer.cs" />
+    <Compile Include="Migrations\201906030650137_AddedBirthDateToCustomer.Designer.cs">
+      <DependentUpon>201906030650137_AddedBirthDateToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906030654315_AlterColumnBirthdate.cs" />
+    <Compile Include="Migrations\201906030654315_AlterColumnBirthdate.Designer.cs">
+      <DependentUpon>201906030654315_AlterColumnBirthdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906030709349_UpdateBirthdayColumn.cs" />
+    <Compile Include="Migrations\201906030709349_UpdateBirthdayColumn.Designer.cs">
+      <DependentUpon>201906030709349_UpdateBirthdayColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -320,6 +332,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906030613362_PopulateMembershipTypeNameColumn.resx">
       <DependentUpon>201906030613362_PopulateMembershipTypeNameColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906030650137_AddedBirthDateToCustomer.resx">
+      <DependentUpon>201906030650137_AddedBirthDateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906030654315_AlterColumnBirthdate.resx">
+      <DependentUpon>201906030654315_AlterColumnBirthdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906030709349_UpdateBirthdayColumn.resx">
+      <DependentUpon>201906030709349_UpdateBirthdayColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
