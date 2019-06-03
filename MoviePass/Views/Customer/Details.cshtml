@@ -8,12 +8,12 @@
 <h1>@Model.Name</h1>
 <ul>
     <li>
-        <h2>@Model.MembershipType.Name</h2>
-    </li>
+        <h2><label>Membership Type:   </label>@Model.MembershipType.Name</></h2>
+</li>
     @if (Model.Birthdate != null)
     {
     <li>
-        <h2>@Model.Birthdate.Value.ToShortDateString()</h2>
+        <h2>  <label>Birthdate:   </label>@Model.Birthdate.Value.ToShortDateString()</h2>
     </li>
     }
 </ul>
