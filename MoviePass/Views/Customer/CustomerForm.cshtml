@@ -1,0 +1,35 @@
+﻿@model MoviePass.ViewModels.CustomerFormViewModel
+@{
+    ViewBag.Title = "Customer Form";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Customer</h2>
+
+@using (Html.BeginForm("Save", "Customer"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customers.Name)
+        @Html.TextAreaFor(m => m.Customers.Name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customers.Birthdate)
+
+        @Html.TextAreaFor(m => m.Customers.Birthdate, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customers.MembershipTypeId)
+
+        @Html.DropDownListFor(m => m.Customers.MembershipType, new SelectList(Model.MembershipTypes,"Id","Name"),"---Select---", new { @class = "form-control" })
+    </div>
+
+
+    <div class="checkbox">
+        <lable>
+            @Html.CheckBoxFor(m => m.Customers.IsSubscribedToNewsLetter) Subscribe to Newsletter?
+        </lable>
+    </div>
+
+    @Html.HiddenFor(m=>m.Customers.Id)
+    <button type="submit" class="btn btn-primary">Save</button>
+}
