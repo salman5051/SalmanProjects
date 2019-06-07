@@ -223,9 +223,54 @@
     <Compile Include="Migrations\201906031553298_AddedGenreToMovies.Designer.cs">
       <DependentUpon>201906031553298_AddedGenreToMovies.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906070432304_AddGenreTable.cs" />
+    <Compile Include="Migrations\201906070432304_AddGenreTable.Designer.cs">
+      <DependentUpon>201906070432304_AddGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906070435034_PopulateGenre.cs" />
+    <Compile Include="Migrations\201906070435034_PopulateGenre.Designer.cs">
+      <DependentUpon>201906070435034_PopulateGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906070524285_UpdateModels.cs" />
+    <Compile Include="Migrations\201906070524285_UpdateModels.Designer.cs">
+      <DependentUpon>201906070524285_UpdateModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906070533300_UpdatMoviesModel.cs" />
+    <Compile Include="Migrations\201906070533300_UpdatMoviesModel.Designer.cs">
+      <DependentUpon>201906070533300_UpdatMoviesModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906070535226_UpdatMoviesModel1.cs" />
+    <Compile Include="Migrations\201906070535226_UpdatMoviesModel1.Designer.cs">
+      <DependentUpon>201906070535226_UpdatMoviesModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906070548398_UpdatMoviesModel2.cs" />
+    <Compile Include="Migrations\201906070548398_UpdatMoviesModel2.Designer.cs">
+      <DependentUpon>201906070548398_UpdatMoviesModel2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906070603182_UpdatMoviesModel3.cs" />
+    <Compile Include="Migrations\201906070603182_UpdatMoviesModel3.Designer.cs">
+      <DependentUpon>201906070603182_UpdatMoviesModel3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906070612013_UpdatMoviesModel4.cs" />
+    <Compile Include="Migrations\201906070612013_UpdatMoviesModel4.Designer.cs">
+      <DependentUpon>201906070612013_UpdatMoviesModel4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906070621453_RemovingGenre.cs" />
+    <Compile Include="Migrations\201906070621453_RemovingGenre.Designer.cs">
+      <DependentUpon>201906070621453_RemovingGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906070624491_AddingGenreIdAgain.cs" />
+    <Compile Include="Migrations\201906070624491_AddingGenreIdAgain.Designer.cs">
+      <DependentUpon>201906070624491_AddingGenreIdAgain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906070653582_UpdatedMovieModels.cs" />
+    <Compile Include="Migrations\201906070653582_UpdatedMovieModels.Designer.cs">
+      <DependentUpon>201906070653582_UpdatedMovieModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -233,6 +278,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModels\MovieFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-lumen.css" />
@@ -297,6 +343,7 @@
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Customer\Edit.cshtml" />
     <Content Include="Views\Customer\CustomerForm.cshtml" />
+    <Content Include="Views\Movie\CreateMovie.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -350,6 +397,39 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906031553298_AddedGenreToMovies.resx">
       <DependentUpon>201906031553298_AddedGenreToMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906070432304_AddGenreTable.resx">
+      <DependentUpon>201906070432304_AddGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906070435034_PopulateGenre.resx">
+      <DependentUpon>201906070435034_PopulateGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906070524285_UpdateModels.resx">
+      <DependentUpon>201906070524285_UpdateModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906070533300_UpdatMoviesModel.resx">
+      <DependentUpon>201906070533300_UpdatMoviesModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906070535226_UpdatMoviesModel1.resx">
+      <DependentUpon>201906070535226_UpdatMoviesModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906070548398_UpdatMoviesModel2.resx">
+      <DependentUpon>201906070548398_UpdatMoviesModel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906070603182_UpdatMoviesModel3.resx">
+      <DependentUpon>201906070603182_UpdatMoviesModel3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906070612013_UpdatMoviesModel4.resx">
+      <DependentUpon>201906070612013_UpdatMoviesModel4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906070621453_RemovingGenre.resx">
+      <DependentUpon>201906070621453_RemovingGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906070624491_AddingGenreIdAgain.resx">
+      <DependentUpon>201906070624491_AddingGenreIdAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906070653582_UpdatedMovieModels.resx">
+      <DependentUpon>201906070653582_UpdatedMovieModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
